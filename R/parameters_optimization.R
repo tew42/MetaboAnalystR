@@ -250,7 +250,9 @@ optimizxcms.doe.peakpicking <- function(object = NULL, params = params,
     tmp_matrix<-cbind(tmp_matrix,PPS.set,CV.set.normalized,RCS.set.normalized,GS.set.normalized,
                       GaussianSI.set.normalized,QCoE,QS)
     mSet_OPT[["response"]]<-tmp_matrix
-    
+	  
+    write.table(tmp_matrix, file = "output.csv", append = TRUE, sep = "\t", eol = "\n\r")
+	  
     message("Round ",iterator," Finished !")
 
     mSet_OPT <-
