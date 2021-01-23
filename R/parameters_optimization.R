@@ -436,6 +436,9 @@ ExperimentsCluster_doe <-function(object, object_mslevel,params,
     as.list(x)
   })
   
+  write.table(design, file = "output.csv", append = TRUE, sep = "\t", eol = "\n\r")
+  write.table(design_list, file = "output.csv", append = TRUE, sep = "\t", eol = "\n\r")
+	
   tasks <- 1:nrow(design);
   
   if (.Platform$OS.type=="windows"){
