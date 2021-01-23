@@ -172,30 +172,30 @@ CentroidCheck <- function(filename){
 #' SetPeakParam
 #' @description SetPeakParam, used to set the peak param 
 #' @author Zhiqiang Pang
-SetPeakParam <- function(platform = "general", Peak_method = "centWave", RT_method = "loess",
-                         mzdiff, snthresh, bw, # used for both "centwave" and "matchedFilter"
-                         ppm, min_peakwidth, max_peakwidth, noise, prefilter, value_of_prefilter, # used for "centwave"
-                         fwhm, steps, sigma, peakBinSize, max, # used for "matchedFilter"
-                         criticalValue, consecMissedLimit, unions, checkBack, withWave, # used for "massifquant"
-                         profStep, # used for "obiwarp"
-                         minFraction, minSamples, maxFeatures, mzCenterFun, integrate,# used for grouping
-                         extra, span, smooth, family, fitgauss, # used for RT correction with peakgroup "loess"
-                         polarity, perc_fwhm, mz_abs_iso, max_charge, max_iso, corr_eic_th, mz_abs_add, #used for annotation
-                         rmConts #used to control remove contamination or not
-                         ){
-    OptiLCMS::SetPeakParam(platform = "general", Peak_method = "centWave", RT_method = "loess",
-                           mzdiff, snthresh, bw, # used for both "centwave" and "matchedFilter"
-                           ppm, min_peakwidth, max_peakwidth, noise, prefilter, value_of_prefilter, # used for "centwave"
-                           fwhm, steps, sigma, peakBinSize, max, # used for "matchedFilter"
-                           criticalValue, consecMissedLimit, unions, checkBack, withWave, # used for "massifquant"
-                           profStep, # used for "obiwarp"
-                           minFraction, minSamples, maxFeatures, mzCenterFun, integrate,# used for grouping
-                           extra, span, smooth, family, fitgauss, # used for RT correction with peakgroup "loess"
-                           polarity, perc_fwhm, mz_abs_iso, max_charge, max_iso, corr_eic_th, mz_abs_add, #used for annotation
-                           rmConts #used to control remove contamination or not
-  )
-  #return nothing
-}
+#SetPeakParam <- function(platform = "general", Peak_method = "centWave", RT_method = "loess",
+#                         mzdiff, snthresh, bw, # used for both "centwave" and "matchedFilter"
+#                         ppm, min_peakwidth, max_peakwidth, noise, prefilter, value_of_prefilter, # used for "centwave"
+#                         fwhm, steps, sigma, peakBinSize, max, # used for "matchedFilter"
+#                         criticalValue, consecMissedLimit, unions, checkBack, withWave, # used for "massifquant"
+#                         profStep, # used for "obiwarp"
+#                         minFraction, minSamples, maxFeatures, mzCenterFun, integrate,# used for grouping
+#                         extra, span, smooth, family, fitgauss, # used for RT correction with peakgroup "loess"
+#                         polarity, perc_fwhm, mz_abs_iso, max_charge, max_iso, corr_eic_th, mz_abs_add, #used for annotation
+#                         rmConts #used to control remove contamination or not
+#                         ){
+#    OptiLCMS::SetPeakParam(platform = "general", Peak_method = "centWave", RT_method = "loess",
+#                           mzdiff, snthresh, bw, # used for both "centwave" and "matchedFilter"
+#                           ppm, min_peakwidth, max_peakwidth, noise, prefilter, value_of_prefilter, # used for "centwave"
+#                           fwhm, steps, sigma, peakBinSize, max, # used for "matchedFilter"
+#                           criticalValue, consecMissedLimit, unions, checkBack, withWave, # used for "massifquant"
+#                           profStep, # used for "obiwarp"
+#                           minFraction, minSamples, maxFeatures, mzCenterFun, integrate,# used for grouping
+#                           extra, span, smooth, family, fitgauss, # used for RT correction with peakgroup "loess"
+#                           polarity, perc_fwhm, mz_abs_iso, max_charge, max_iso, corr_eic_th, mz_abs_add, #used for annotation
+#                           rmConts #used to control remove contamination or not
+#  )
+#  #return nothing
+#}
 
 #' GeneratePeakList
 #' @description GeneratePeakList is used to generate the peak summary list for result page
