@@ -429,16 +429,15 @@ ExperimentsCluster_doe <-function(object, object_mslevel,params,
           max(typ_params$to_optimize[[1]]), 
           diff(typ_params$to_optimize[[1]])/8)
   }
-  
+	
+  write.table(param_design, file = "output.csv", append = TRUE, sep = "\t", eol = "\n\r")
+
   param_design <- combineParams(param_design, typ_params$no_optimization)   
   
   design_list <- apply(param_design,1,FUN = function(x){
     as.list(x)
   })
   
-  write.table(design, file = "output.csv", append = TRUE, sep = "\t", eol = "\n\r")
-  write.table(design_list, file = "output.csv", append = TRUE, sep = "\t", eol = "\n\r")
-	
   tasks <- 1:nrow(design);
   
   if (.Platform$OS.type=="windows"){
