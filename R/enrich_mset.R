@@ -42,6 +42,7 @@ SetCurrentMsetLib <- function(mSetObj=NA, libname, excludeNum=0){
     if(!.on.public.web & grepl("kegg", libname)){ # api only for KEGG msets
       mSetObj$api$libname <- libname
       mSetObj$api$excludeNum = excludeNum
+      mSetObj$analSet$msetlibname <- libname
       return(.set.mSet(mSetObj));
     }
     
@@ -445,7 +446,7 @@ Setup.KEGGReferenceMetabolome<-function(mSetObj=NA, filePath){
   }
   
   if(anal.type %in% c("msetora", "msetssp", "msetqea")){
-    cmpd.db <- .get.my.lib("class_compound_db_2020.qs");
+    cmpd.db <- .get.my.lib("master_compound_db.qs");
   }else{
     cmpd.db <- .get.my.lib("compound_db.qs");
   }
@@ -491,7 +492,7 @@ Setup.HMDBReferenceMetabolome<-function(mSetObj=NA, filePath){
   }
   
   if(anal.type %in% c("msetora", "msetssp", "msetqea")){
-    cmpd.db <- .get.my.lib("class_compound_db_2020.qs");
+    cmpd.db <- .get.my.lib("master_compound_db.qs");
   }else{
     cmpd.db <- .get.my.lib("compound_db.qs");
   }
